@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riska Radars (GC) - GuildBau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">GuildBau</div>
+        <nav>
+            <ul>
+                <li><a href="mvu_dashboard_bronze.html">Mans Panelis (MVU)</a></li>
+                <li><a href="gc_dashboard_risk.html" class="active">Riska Radars (GC)</a></li>
+                <li><a href="association_dashboard.html">Asociācijas Panelis (Admin)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Ģenerāluzņēmēja Riska Radars</h1>
+        <p>Pārvaldiet savas piegādes ķēdes atbilstību un riskus vienuviet.</p>
+
+        <div class="kpi-grid" style="margin-top: 20px;">
+            <div class="kpi-card kpi-risk">
+                <div class="value">3</div>
+                <div class="label">Partneriem beigusies apdrošināšana</div>
+            </div>
+            <div class="kpi-card kpi-warn">
+                <div class="value">8</div>
+                <div class="label">Partneri ar 'Pending' ESG statusu</div>
+            </div>
+            <div class="kpi-card kpi-ok">
+                <div class="value">68<span>/100</span></div>
+                <div class="label">Vidējais TrustScore ķēdē</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="gc_search_results.html" class="btn btn-primary" style="font-size: 1.2em;">Atrast jaunus,
+                verificētus piegādātājus</a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

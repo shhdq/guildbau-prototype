@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Panelis - GuildBau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">GuildBau</div>
+        <nav>
+            <ul>
+                <li><a href="mvu_dashboard_bronze.html" class="active">Mans Panelis (MVU)</a></li>
+                <li><a href="gc_dashboard_risk.html">Riska Radars (GC)</a></li>
+                <li><a href="association_dashboard.html">Asociācijas Panelis (Admin)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content" style="max-width: 900px; margin: auto;">
+            <h1>ESG & CSRD Ziņošanas Panelis</h1>
+            <p>Sagatavojiet un kopīgojiet savus ESG datus ar ģenerāluzņēmējiem. Aizpildiet vienreiz, dalieties ar visiem.</p>
+
+            <section style="margin-top: 30px;">
+                <h2>Jūsu ESG profils</h2>
+                <form class="vault-form" style="display: grid; gap: 20px; margin-top: 15px;">
+                    <label>
+                        Gada CO<sub>2</sub> emisijas (tonnās):
+                        <input type="text" placeholder="Piem., 1200" style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid var(--border-color);">
+                    </label>
+                    <label>
+                        Atkritumu pārstrādes procents:
+                        <input type="text" placeholder="Piem., 78%" style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid var(--border-color);">
+                    </label>
+                    <label>
+                        Darba drošības incidentu skaits (LTIFR):
+                        <input type="text" placeholder="Piem., 1.2" style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid var(--border-color);">
+                    </label>
+                </form>
+            </section>
+
+            <section style="margin-top: 40px;">
+                <h2>Pamatojošie dokumenti</h2>
+                <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                    <li class="search-result" style="align-items: center; gap: 15px;">
+                        <div>Pārskats par ietekmi uz vidi (PDF)</div>
+                        <a href="#" class="btn btn-secondary">Augšupielādēt</a>
+                    </li>
+                    <li class="search-result" style="align-items: center; gap: 15px;">
+                        <div>Piegādes ķēdes ētikas kodekss (PDF)</div>
+                        <a href="#" class="btn btn-secondary">Augšupielādēt</a>
+                    </li>
+                </ul>
+            </section>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="mvu_dashboard_gold.html" class="btn btn-primary" id="simulate-upload">Iesniegt ESG profilu un iegūt 'Gold'</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

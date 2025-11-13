@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociācijas Administrācijas Panelis - GuildBau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">GuildBau</div>
+        <nav>
+            <ul>
+                <li><a href="mvu_dashboard_bronze.html">Mans Panelis (MVU)</a></li>
+                <li><a href="gc_dashboard_risk.html">Riska Radars (GC)</a></li>
+                <li><a href="association_dashboard.html" class="active">Asociācijas Panelis (Admin)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Asociācijas "Būvētājs" Administrācijas Panelis</h1>
+        <p>White-label pārvaldība: monitorējiet biedrus, validējiet dokumentus un sūtiet paziņojumus tieši savas asociācijas vārdā.</p>
+
+        <div class="kpi-grid" style="margin-top: 20px;">
+            <div class="kpi-card kpi-ok">
+                <div class="label">Kopējais biedru skaits</div>
+                <div class="value">145</div>
+            </div>
+            <div class="kpi-card kpi-risk">
+                <div class="label">Gaida validāciju</div>
+                <div class="value">4</div>
+            </div>
+            <div class="kpi-card kpi-warn">
+                <div class="label">Biedri ar "Bronze" statusu</div>
+                <div class="value">35</div>
+            </div>
+            <div class="kpi-card kpi-ok">
+                <div class="label">Biedri ar "Silver+" statusu</div>
+                <div class="value">110</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="association_member_list.html" class="btn btn-primary" style="margin-right: 10px;">Pārvaldīt biedrus un validāciju</a>
+            <a href="#" class="btn btn-secondary">Sūtīt paziņojumu visiem biedriem</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
