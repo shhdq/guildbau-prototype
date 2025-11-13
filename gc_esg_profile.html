@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC ESG Profils - GuildBau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="gc-esg-profile">
+
+    <header>
+        <div class="logo">GuildBau</div>
+        <nav>
+            <ul>
+                <li><a href="mvu_dashboard_bronze.html">Mans Panelis (MVU)</a></li>
+                <li><a href="mvu_vault.html">Dokumentu Krātuve</a></li>
+                <li><a href="mvu_esg_dashboard.html">ESG Panelis</a></li>
+                <li><a href="gc_dashboard_risk.html" class="active">Riska Radars (GC)</a></li>
+                <li><a href="association_dashboard.html">Asociācijas Panelis (Admin)</a></li>
+                <li><a href="mvu_dashboard_gold.html">Gold Panelis (Demo)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>ESG profils ģenerāluzņēmējam</h1>
+        <p>Pārskatiet MVU iesniegtos ESG datus, pirms piešķirat projektu vai uzaicināt tenderī.</p>
+
+        <div class="main-content" data-esg-summary>
+            <h2 data-bind="companyName">Būve ABC</h2>
+            <div class="grid" style="gap: 20px;">
+                <div class="kpi-card kpi-ok">
+                    <div class="value" data-bind="co2">1 200</div>
+                    <div class="label">Gada CO₂ (t)</div>
+                </div>
+                <div class="kpi-card kpi-ok">
+                    <div class="value" data-bind="recycling">78%</div>
+                    <div class="label">Atkritumu pārstrāde</div>
+                </div>
+                <div class="kpi-card kpi-ok">
+                    <div class="value" data-bind="ltifr">1.2</div>
+                    <div class="label">LTIFR</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px;">Pamatojošie dokumenti</h3>
+            <ul style="list-style: none; padding: 0;" data-esg-docs></ul>
+
+            <div style="margin-top: 25px;">
+                <a href="gc_dashboard_risk.html" class="btn btn-secondary">Atgriezties pie riska radara</a>
+                <a href="#" class="btn btn-primary" id="invite-btn">Uzaicināt darbam (Demo)</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

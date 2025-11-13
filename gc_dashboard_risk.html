@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="gc-risk">
 
     <header>
         <div class="logo">GuildBau</div>
         <nav>
             <ul>
                 <li><a href="mvu_dashboard_bronze.html">Mans Panelis (MVU)</a></li>
+                <li><a href="mvu_vault.html">Dokumentu Krātuve</a></li>
+                <li><a href="mvu_esg_dashboard.html">ESG Panelis</a></li>
                 <li><a href="gc_dashboard_risk.html" class="active">Riska Radars (GC)</a></li>
                 <li><a href="association_dashboard.html">Asociācijas Panelis (Admin)</a></li>
+                <li><a href="mvu_dashboard_gold.html">Gold Panelis (Demo)</a></li>
             </ul>
         </nav>
     </header>
@@ -25,24 +28,12 @@
         <h1>Ģenerāluzņēmēja Riska Radars</h1>
         <p>Pārvaldiet savas piegādes ķēdes atbilstību un riskus vienuviet.</p>
 
-        <div class="kpi-grid" style="margin-top: 20px;">
-            <div class="kpi-card kpi-risk">
-                <div class="value">3</div>
-                <div class="label">Partneriem beigusies apdrošināšana</div>
-            </div>
-            <div class="kpi-card kpi-warn">
-                <div class="value">8</div>
-                <div class="label">Partneri ar 'Pending' ESG statusu</div>
-            </div>
-            <div class="kpi-card kpi-ok">
-                <div class="value">68<span>/100</span></div>
-                <div class="label">Vidējais TrustScore ķēdē</div>
-            </div>
-        </div>
+        <div class="kpi-grid" style="margin-top: 20px;" data-kpi-grid></div>
 
         <div style="margin-top: 30px;">
             <a href="gc_search_results.html" class="btn btn-primary" style="font-size: 1.2em;">Atrast jaunus,
                 verificētus piegādātājus</a>
+            <a href="gc_esg_profile.html" class="btn btn-secondary" style="margin-left: 10px;">Skatīt ESG profilu (Demo)</a>
         </div>
 
     </div>

@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="association-dashboard">
 
     <header>
         <div class="logo">GuildBau</div>
         <nav>
             <ul>
                 <li><a href="mvu_dashboard_bronze.html">Mans Panelis (MVU)</a></li>
+                <li><a href="mvu_vault.html">Dokumentu Krātuve</a></li>
+                <li><a href="mvu_esg_dashboard.html">ESG Panelis</a></li>
                 <li><a href="gc_dashboard_risk.html">Riska Radars (GC)</a></li>
                 <li><a href="association_dashboard.html" class="active">Asociācijas Panelis (Admin)</a></li>
+                <li><a href="mvu_dashboard_gold.html">Gold Panelis (Demo)</a></li>
             </ul>
         </nav>
     </header>
@@ -28,25 +31,34 @@
         <div class="kpi-grid" style="margin-top: 20px;">
             <div class="kpi-card kpi-ok">
                 <div class="label">Kopējais biedru skaits</div>
-                <div class="value">145</div>
+                <div class="value" data-bind="membersTotal">145</div>
             </div>
             <div class="kpi-card kpi-risk">
                 <div class="label">Gaida validāciju</div>
-                <div class="value">4</div>
+                <div class="value" data-bind="pendingValidation">4</div>
             </div>
             <div class="kpi-card kpi-warn">
                 <div class="label">Biedri ar "Bronze" statusu</div>
-                <div class="value">35</div>
+                <div class="value" data-bind="bronzeMembers">35</div>
             </div>
             <div class="kpi-card kpi-ok">
                 <div class="label">Biedri ar "Silver+" statusu</div>
-                <div class="value">110</div>
+                <div class="value" data-bind="silverPlus">110</div>
             </div>
         </div>
 
         <div style="margin-top: 30px;">
             <a href="association_member_list.html" class="btn btn-primary" style="margin-right: 10px;">Pārvaldīt biedrus un validāciju</a>
             <a href="#" class="btn btn-secondary">Sūtīt paziņojumu visiem biedriem</a>
+        </div>
+
+        <div class="theme-toggle">
+            <label for="theme-select">White-label tēma:</label>
+            <select id="theme-select">
+                <option value="default">GuildBau</option>
+                <option value="lba">LBA</option>
+                <option value="buvetajs">"Būvētājs"</option>
+            </select>
         </div>
     </div>
 

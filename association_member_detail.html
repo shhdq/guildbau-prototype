@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biedra detalizēta validācija - GuildBau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="association-member-detail">
+
+    <header>
+        <div class="logo">GuildBau</div>
+        <nav>
+            <ul>
+                <li><a href="mvu_dashboard_bronze.html">Mans Panelis (MVU)</a></li>
+                <li><a href="mvu_vault.html">Dokumentu Krātuve</a></li>
+                <li><a href="mvu_esg_dashboard.html">ESG Panelis</a></li>
+                <li><a href="gc_dashboard_risk.html">Riska Radars (GC)</a></li>
+                <li><a href="association_dashboard.html" class="active">Asociācijas Panelis (Admin)</a></li>
+                <li><a href="mvu_dashboard_gold.html">Gold Panelis (Demo)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Biedra detalizēta pārbaude</h1>
+        <p>Atveriet dokumentus, pierakstiet komentārus un apstipriniet vai noraidiet validāciju ar vienu klikšķi.</p>
+
+        <div class="theme-toggle">
+            <label for="theme-select">White-label tēma:</label>
+            <select id="theme-select">
+                <option value="default">GuildBau</option>
+                <option value="lba">LBA</option>
+                <option value="buvetajs">"Būvētājs"</option>
+            </select>
+        </div>
+
+        <div class="main-content" style="margin-top: 20px;" data-member-detail>
+            <h2 data-bind="memberName">Jaunais Būvnieks SIA</h2>
+            <p><strong>Statuss:</strong> <span data-bind="statusLabel">Gaida validāciju</span></p>
+
+            <table class="vault-table">
+                <thead>
+                    <tr>
+                        <th>Dokuments</th>
+                        <th>Statuss</th>
+                        <th>Atjaunots</th>
+                        <th>Piezīme</th>
+                    </tr>
+                </thead>
+                <tbody data-member-docs></tbody>
+            </table>
+
+            <label style="display: block; margin-top: 20px;">
+                Komentārs validācijas komandai:
+                <textarea id="review-notes" rows="4" style="width: 100%; margin-top: 5px; border-radius: 6px; border: 1px solid var(--border-color); padding: 10px;" placeholder="Piem., Nepieciešama papildu informācija par apdrošināšanu"></textarea>
+            </label>
+
+            <div class="modal-actions" style="justify-content: flex-start;">
+                <button type="button" class="btn btn-secondary" data-action="request-more">Pieprasīt labojumus</button>
+                <button type="button" class="btn btn-primary" data-action="approve-member">Apstiprināt biedru</button>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <a href="association_member_list.html" class="btn btn-secondary">Atpakaļ uz sarakstu</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

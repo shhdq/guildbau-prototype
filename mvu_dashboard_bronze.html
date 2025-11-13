@@ -8,18 +8,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="mvu-bronze">
 
     <header>
         <div class="logo">GuildBau</div>
         <nav>
             <ul>
                 <li><a href="mvu_dashboard_bronze.html" class="active">Mans Panelis (MVU)</a></li>
+                <li><a href="mvu_vault.html">Dokumentu Krātuve</a></li>
+                <li><a href="mvu_esg_dashboard.html">ESG Panelis</a></li>
                 <li><a href="gc_dashboard_risk.html">Riska Radars (GC)</a></li>
                 <li><a href="association_dashboard.html">Asociācijas Panelis (Admin)</a></li>
+                <li><a href="mvu_dashboard_gold.html">Gold Panelis (Demo)</a></li>
             </ul>
         </nav>
     </header>
+
+    <div class="container">
+        <div class="sub-nav">
+            <a href="mvu_dashboard_bronze.html" class="active">Bronze Panelis</a>
+            <a href="mvu_vault.html">Dokumentu Krātuve</a>
+            <a href="mvu_esg_dashboard.html">ESG Panelis</a>
+            <a href="mvu_dashboard_silver.html">Silver Panelis</a>
+            <a href="mvu_dashboard_gold.html">Gold Panelis</a>
+        </div>
+        <div class="theme-toggle" data-persona-switcher>
+            <label for="persona-select">Prototipa scenārijs:</label>
+            <select id="persona-select">
+                <option value="mvu_dashboard_bronze.html" selected>Bronze</option>
+                <option value="mvu_dashboard_silver.html">Silver</option>
+                <option value="mvu_dashboard_gold.html">Gold</option>
+            </select>
+        </div>
+    </div>
 
     <div class="container grid">
         <div class="main-content">
@@ -33,9 +54,9 @@
                 <a href="mvu_vault.html" class="btn btn-primary">Uzsākt verifikāciju</a>
             </div>
 
-            <h2>Jūsu profila pabeigtība: 30%</h2>
+            <h2>Jūsu profila pabeigtība: <span data-bind="profileCompletion">30%</span></h2>
             <div class="progress-bar">
-                <div class="progress-bar-inner" style="width: 30%;">30%</div>
+                <div class="progress-bar-inner" data-bind="profileCompletion" data-bind-type="progress" style="width: 30%;">30%</div>
             </div>
 
             <h2 style="margin-top: 30px;">Mērķis: Silver Līmenis</h2>
@@ -52,7 +73,7 @@
 
             <h3>Jūsu TrustScore</h3>
             <div class="trust-score-widget">
-                <div class="score">45<span>/100</span></div>
+                <div class="score"><span data-bind="trustScore">45</span><span>/100</span></div>
                 <p>Balstīts uz profila pamatdatiem.</p>
             </div>
         </aside>

@@ -8,20 +8,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="mvu-vault">
 
     <header>
         <div class="logo">GuildBau</div>
         <nav>
             <ul>
-                <li><a href="mvu_dashboard_bronze.html" class="active">Mans Panelis (MVU)</a></li>
+                <li><a href="mvu_dashboard_bronze.html">Mans Panelis (MVU)</a></li>
+                <li><a href="mvu_vault.html" class="active">Dokumentu Krātuve</a></li>
+                <li><a href="mvu_esg_dashboard.html">ESG Panelis</a></li>
                 <li><a href="gc_dashboard_risk.html">Riska Radars (GC)</a></li>
                 <li><a href="association_dashboard.html">Asociācijas Panelis (Admin)</a></li>
+                <li><a href="mvu_dashboard_gold.html">Gold Panelis (Demo)</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
+        <div class="sub-nav">
+            <a href="mvu_dashboard_bronze.html">Bronze Panelis</a>
+            <a href="mvu_vault.html" class="active">Dokumentu Krātuve</a>
+            <a href="mvu_esg_dashboard.html">ESG Panelis</a>
+            <a href="mvu_dashboard_silver.html">Silver Panelis</a>
+            <a href="mvu_dashboard_gold.html">Gold Panelis</a>
+        </div>
+        <div class="theme-toggle" data-persona-switcher>
+            <label for="persona-select">Prototipa scenārijs:</label>
+            <select id="persona-select">
+                <option value="mvu_dashboard_bronze.html">Bronze</option>
+                <option value="mvu_dashboard_silver.html">Silver</option>
+                <option value="mvu_dashboard_gold.html">Gold</option>
+            </select>
+        </div>
         <div class="main-content" style="max-width: 1000px; margin: auto;">
             <h1>Verified Documents Vault</h1>
             <p>Šeit jūs varat pārvaldīt savus GuildBau Standarta Verifikācijas Ietvara (GVF) dokumentus.</p>
@@ -36,41 +54,41 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1. Legal & Registration</td>
-                        <td><span class="status-badge status-verified">Verified</span></td>
-                        <td>Apskatīt</td>
+                        <td data-label="GVF Kategorija">1. Legal & Registration</td>
+                        <td data-label="Statuss"><span class="status-badge status-verified">Verified</span></td>
+                        <td data-label="Darbība">Apskatīt</td>
                     </tr>
                     <tr>
-                        <td>2. Finance & Solvency</td>
-                        <td><span class="status-badge status-pending">Pending Validation</span></td>
-                        <td>Atcelt</td>
+                        <td data-label="GVF Kategorija">2. Finance & Solvency</td>
+                        <td data-label="Statuss"><span class="status-badge status-pending">Pending Validation</span></td>
+                        <td data-label="Darbība">Atcelt</td>
                     </tr>
                     <tr>
-                        <td>3. Insurance & Liability</td>
-                        <td><span class="status-badge status-expired">Expired</span></td>
-                        <td><a href="#" class="btn-primary"
+                        <td data-label="GVF Kategorija">3. Insurance & Liability</td>
+                        <td data-label="Statuss"><span class="status-badge status-expired">Expired</span></td>
+                        <td data-label="Darbība"><a href="#" class="btn-primary"
                                 style="padding: 5px 10px; font-size: 0.9em; text-decoration: none;">Augšupielādēt
                                 jaunu</a></td>
                     </tr>
                     <tr>
-                        <td>4. Certifications & ISO</td>
-                        <td><span class="status-badge status-empty">Nav iesniegts</span></td>
-                        <td><a href="#" style="font-weight: bold;">Augšupielādēt</a></td>
+                        <td data-label="GVF Kategorija">4. Certifications & ISO</td>
+                        <td data-label="Statuss"><span class="status-badge status-empty">Nav iesniegts</span></td>
+                        <td data-label="Darbība"><a href="#" style="font-weight: bold;">Augšupielādēt</a></td>
                     </tr>
                     <tr>
-                        <td>5. Health & Safety (H&S)</td>
-                        <td><span class="status-badge status-empty">Nav iesniegts</span></td>
-                        <td><a href="#" style="font-weight: bold;">Augšupielādēt</a></td>
+                        <td data-label="GVF Kategorija">5. Health & Safety (H&S)</td>
+                        <td data-label="Statuss"><span class="status-badge status-empty">Nav iesniegts</span></td>
+                        <td data-label="Darbība"><a href="#" style="font-weight: bold;">Augšupielādēt</a></td>
                     </tr>
                     <tr>
-                        <td>6. ESG & Sustainability</td>
-                        <td><span class="status-badge status-empty">Nav iesniegts</span></td>
-                        <td><a href="mvu_esg_dashboard.html" style="font-weight: bold; color: var(--status-verified);">Aizpildīt ESG profilu (Lai iegūtu Gold)</a></td>
+                        <td data-label="GVF Kategorija">6. ESG & Sustainability</td>
+                        <td data-label="Statuss"><span class="status-badge status-empty">Nav iesniegts</span></td>
+                        <td data-label="Darbība"><a href="mvu_esg_dashboard.html" style="font-weight: bold; color: var(--status-verified);">Aizpildīt ESG profilu (Lai iegūt Gold)</a></td>
                     </tr>
                     <tr>
-                        <td>... citi GVF punkti ...</td>
-                        <td><span class="status-badge status-empty">Nav iesniegts</span></td>
-                        <td><a href="#" style="font-weight: bold;">Augšupielādēt</a></td>
+                        <td data-label="GVF Kategorija">... citi GVF punkti ...</td>
+                        <td data-label="Statuss"><span class="status-badge status-empty">Nav iesniegts</span></td>
+                        <td data-label="Darbība"><a href="#" style="font-weight: bold;">Augšupielādēt</a></td>
                     </tr>
                 </tbody>
             </table>

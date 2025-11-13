@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="gc-search">
 
     <header>
         <div class="logo">GuildBau</div>
         <nav>
             <ul>
                 <li><a href="mvu_dashboard_bronze.html">Mans Panelis (MVU)</a></li>
+                <li><a href="mvu_vault.html">Dokumentu Krātuve</a></li>
+                <li><a href="mvu_esg_dashboard.html">ESG Panelis</a></li>
                 <li><a href="gc_dashboard_risk.html" class="active">Riska Radars (GC)</a></li>
                 <li><a href="association_dashboard.html">Asociācijas Panelis (Admin)</a></li>
+                <li><a href="mvu_dashboard_gold.html">Gold Panelis (Demo)</a></li>
             </ul>
         </nav>
     </header>
@@ -26,58 +29,7 @@
         <p>Filtri: Līmenis (<strong>Silver+</strong>), Kategorija (<strong>Fasādes</strong>), Atbilstība (<strong>Ir ESG
                 profils</strong>)</p>
 
-        <div class="search-results-list" style="margin-top: 20px;">
-
-            <div class="search-result">
-                <div>
-                    <h3>Būve ABC (Jūsu jaunais partneris)</h3>
-                    <span class="level-tag">Līmenis: <span
-                            style="color: var(--guildbau-silver); font-weight: bold;">SILVER</span></span> |
-                    <span class="level-tag">ESG: <span
-                            style="color: var(--status-verified); font-weight: bold;">VERIFIED</span></span>
-                </div>
-                <div class="trust-score">
-                    75<span>/100</span>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-primary">Skatīt profilu</a>
-                </div>
-            </div>
-
-            <div class="search-result">
-                <div>
-                    <h3>Darbi XYZ</h3>
-                    <span class="level-tag">Līmenis: <span
-                            style="color: var(--guildbau-bronze); font-weight: bold;">BRONZE</span></span> |
-                    <span class="level-tag">ESG: <span style="color: var(--status-empty); font-weight: bold;">Nav
-                            datu</span></span>
-                </div>
-                <div class="trust-score" style="color: var(--status-pending)">
-                    45<span>/100</span>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-secondary" style="opacity: 0.7; cursor: not-allowed;"
-                        onclick="return false;">Nepieejams (Par zemu līmenis)</a>
-                </div>
-            </div>
-
-            <div class="search-result">
-                <div>
-                    <h3>Fasādes Meistari SIA</h3>
-                    <span class="level-tag">Līmenis: <span
-                            style="color: var(--guildbau-silver); font-weight: bold;">SILVER</span></span> |
-                    <span class="level-tag">ESG: <span style="color: var(--status-expired); font-weight: bold;">Beidzies
-                            derīguma termiņš</span></span>
-                </div>
-                <div class="trust-score" style="color: var(--status-expired)">
-                    55<span>/100</span>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-primary">Skatīt profilu (Ar riska brīdinājumu)</a>
-                </div>
-            </div>
-
-        </div>
+        <div class="search-results-list" style="margin-top: 20px;" data-results></div>
     </div>
 
     <script src="script.js"></script>

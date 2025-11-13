@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="association-member-list">
 
     <header>
         <div class="logo">GuildBau</div>
         <nav>
             <ul>
                 <li><a href="mvu_dashboard_bronze.html">Mans Panelis (MVU)</a></li>
+                <li><a href="mvu_vault.html">Dokumentu Krātuve</a></li>
+                <li><a href="mvu_esg_dashboard.html">ESG Panelis</a></li>
                 <li><a href="gc_dashboard_risk.html">Riska Radars (GC)</a></li>
                 <li><a href="association_dashboard.html" class="active">Asociācijas Panelis (Admin)</a></li>
+                <li><a href="mvu_dashboard_gold.html">Gold Panelis (Demo)</a></li>
             </ul>
         </nav>
     </header>
@@ -24,6 +27,15 @@
     <div class="container">
         <h1>Biedru saraksts un validācijas rinda</h1>
         <p>Asociācijas validācijas komanda var pārskatīt dokumentus, centralizēti redzēt statusus un nodrošināt uzticamus datus GC tirgum.</p>
+
+        <div class="theme-toggle">
+            <label for="theme-select">White-label tēma:</label>
+            <select id="theme-select">
+                <option value="default">GuildBau</option>
+                <option value="lba">LBA</option>
+                <option value="buvetajs">"Būvētājs"</option>
+            </select>
+        </div>
 
         <table class="vault-table" style="margin-top: 25px;">
             <thead>
@@ -34,26 +46,7 @@
                     <th>Darbība</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Būve ABC</td>
-                    <td><span class="status-badge status-verified">Silver</span></td>
-                    <td>75/100</td>
-                    <td><a href="#" class="btn btn-secondary" style="font-size: 0.9em;">Skatīt profilu</a></td>
-                </tr>
-                <tr>
-                    <td>Jaunais Būvnieks SIA</td>
-                    <td><span class="status-badge status-pending">Gaida validāciju</span></td>
-                    <td>N/A</td>
-                    <td><a href="#" class="btn btn-primary" style="font-size: 0.9em;">Pārskatīt dokumentus</a></td>
-                </tr>
-                <tr>
-                    <td>Metāla Risinājumi</td>
-                    <td><span class="status-badge status-expired">Beigusies apdrošināšana</span></td>
-                    <td>55/100</td>
-                    <td><a href="#" class="btn btn-secondary" style="font-size: 0.9em;">Sazināties</a></td>
-                </tr>
-            </tbody>
+            <tbody data-member-rows></tbody>
         </table>
     </div>
 
